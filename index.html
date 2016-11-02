@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+												<!-- Меню -->
+			<div class="col-xs-12">
+				<nav id="navbartop1" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="image/logo.png" alt="Steam">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+      <ul id="osnbar" class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Get Started</a></li>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      			      <ul id="butbar" class="nav navbar-nav">
+        					<li><a href="#">Login/Signup</a></li>
+        					<li><a href="#">Get Listed Today</a></li>
+      					</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+			</div>
+												<!-- Заголовок -->
+			<div id="head4" class="col-md-12 hidden-sm hidden-xs">
+				<h2>Find the <span class="fontweith">next event</span> you`ll want <span class="fontweith">to attend</span></h2>
+			</div>
+		</div>
+	</div>
+													<!-- Карта -->
+	<div id="maps" class="container-fluid">
+		<div class="row">
+<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(28.607893,77.270543),
+            zoom: 13,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+
+            zoomControl: true,
+    		zoomControlOptions: {
+        	position: google.maps.ControlPosition.LEFT_CENTER
+    		},
+
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+
+  {
+
+    "featureType": "water",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "color": "#d3d3d3" }
+
+    ]
+
+  },{
+
+    "featureType": "transit",
+
+    "stylers": [
+
+      { "color": "#808080" },
+
+      { "visibility": "off" }
+
+    ]
+
+  },{
+
+    "featureType": "road.highway",
+
+    "elementType": "geometry.stroke",
+
+    "stylers": [
+
+      { "visibility": "on" },
+
+      { "color": "#b3b3b3" }
+
+    ]
+
+  },{
+
+    "featureType": "road.highway",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "color": "#ffffff" }
+
+    ]
+
+  },{
+
+    "featureType": "road.local",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "visibility": "on" },
+
+      { "color": "#ffffff" },
+
+      { "weight": 1.8 }
+
+    ]
+
+  },{
+
+    "featureType": "road.local",
+
+    "elementType": "geometry.stroke",
+
+    "stylers": [
+
+      { "color": "#d7d7d7" }
+
+    ]
+
+  },{
+
+    "featureType": "poi",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "visibility": "on" },
+
+      { "color": "#ebebeb" }
+
+    ]
+
+  },{
+
+    "featureType": "administrative",
+
+    "elementType": "geometry",
+
+    "stylers": [
+
+      { "color": "#a7a7a7" }
+
+    ]
+
+  },{
+
+    "featureType": "road.arterial",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "color": "#ffffff" }
+
+    ]
+
+  },{
+
+    "featureType": "road.arterial",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "color": "#ffffff" }
+
+    ]
+
+  },{
+
+    "featureType": "landscape",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "visibility": "on" },
+
+      { "color": "#efefef" }
+
+    ]
+
+  },{
+
+    "featureType": "road",
+
+    "elementType": "labels.text.fill",
+
+    "stylers": [
+
+      { "color": "#696969" }
+
+    ]
+
+  },{
+
+    "featureType": "administrative",
+
+    "elementType": "labels.text.fill",
+
+    "stylers": [
+
+      { "visibility": "on" },
+
+      { "color": "#737373" }
+
+    ]
+
+  },{
+
+    "featureType": "poi",
+
+    "elementType": "labels.icon",
+
+    "stylers": [
+
+      { "visibility": "off" }
+
+    ]
+
+  },{
+
+    "featureType": "poi",
+
+    "elementType": "labels",
+
+    "stylers": [
+
+      { "visibility": "off" }
+
+    ]
+
+  },{
+
+    "featureType": "road.arterial",
+
+    "elementType": "geometry.stroke",
+
+    "stylers": [
+
+      { "color": "#d6d6d6" }
+
+    ]
+
+  },{
+
+    "featureType": "road",
+
+    "elementType": "labels.icon",
+
+    "stylers": [
+
+      { "visibility": "off" }
+
+    ]
+
+  },{
+
+  },{
+
+    "featureType": "poi",
+
+    "elementType": "geometry.fill",
+
+    "stylers": [
+
+      { "color": "#dadada" }
+
+    ]
+
+  }
+
+],
+        }
+        var mapElement = document.getElementById('delymaps');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['marker1', 'undefined', 'undefined', 'undefined', 'undefined', 28.590733,  77.278303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker2', 'undefined', 'undefined', 'undefined', 'undefined', 28.591733,  77.275303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker3', 'undefined', 'undefined', 'undefined', 'undefined', 28.584733,  77.265303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker4', 'undefined', 'undefined', 'undefined', 'undefined', 28.585733,  77.258303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker5', 'undefined', 'undefined', 'undefined', 'undefined', 28.600733,  77.265303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker6', 'undefined', 'undefined', 'undefined', 'undefined', 28.600733,  77.290303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker7', 'undefined', 'undefined', 'undefined', 'undefined', 28.600033,  77.300303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker8', 'undefined', 'undefined', 'undefined', 'undefined', 28.615733,  77.284303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker9', 'undefined', 'undefined', 'undefined', 'undefined', 28.620733,  77.280303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker10', 'undefined', 'undefined', 'undefined', 'undefined', 28.625733,  77.263303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker11', 'undefined', 'undefined', 'undefined', 'undefined', 28.598733,  77.257303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png'],['marker12', 'undefined', 'undefined', 'undefined', 'undefined', 28.610733,  77.241303, 'http://s020.radikal.ru/i720/1610/2a/e161cfb1bf03.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>
+<style>
+    #delymaps {
+        height:450px;
+        width:100%;
+    }
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+
+<div id='delymaps'></div>
+		</div>
+	</div>
+														<!-- Конец карты -->
+	<div id="navtabs" class="container-fluid">
+		<div class="container">
+			<!-- Nav tabs -->
+<ul id="nav" class="nav nav-tabs">
+  <li class="active"><a href="#home" data-toggle="tab">Hot Events</a></li>
+  <li><a href="#profile" data-toggle="tab">Tranding Events</a></li>
+  <div class="form">
+  	<div id="form1" class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input id="src" type="text" class="form-control" placeholder="Search for...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<div id="form2" class="row">
+  <div class="col-lg-6">
+    <div id="imputpading" class="input-group">
+      <input id="src1" type="text" class="form-control" placeholder="Your location">
+      <div id="locbg" class=""></div>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+  </div>
+</ul>
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active col-md-12 row" id="home">
+  	<div id="shadow1" class="col-md-4 col-sm-6 col-xs-12">
+  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event1.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Act Big! Ultimate Music Festival</h3>
+  			<p class="zag">Pattichion Municipal Amphitheater</p>
+  			<p class="zag1">Nicolaou G. Dimitriou Street, Larnaca, 6031, Cyprus</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  		<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">13%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">87%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  		</div>
+  		</div> <!-- col11 -->
+  	</div>
+  	<div id="shadow2" class="col-md-4 col-sm-6 col-xs-12">
+  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event2.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Summer Art Club - Week 1/3</h3>
+  			<p class="zag">Fun Factory Wildeshausen</p>
+  			<p class="zag1">Am Umspannwerk 7, Wildeshausen, 27793, Germany</p>
+  			<p class="zag2">Join us for creative holiday activities - this week with Ashley & Letty! Let your 8-13 year olds to join to help burn some of that pent-up creative energy on our fun artist led workshops. You can book all three days, or just one at a time...</p>
+  		</div>
+  		<div>
+  		<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">25%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">75%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	</div>
+  	<div id="shadow3" class="col-md-4 col-sm-6 col-xs-12">
+  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event3.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Bocca Footbar @ Vama Veche</h3>
+  			<p class="zag">Pattichion Municipal Amphitheater</p>
+  			<p class="zag1">Nicolaou G. Dimitriou Street, Larnaca, 6031, Cyprus</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  		<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">62%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">38%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	</div>
+  	<div id="shadow4" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event4.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Faringdon Community Sports College - Summer - Week 2</h3>
+  			<p class="zag">University of Netherlands Antilles</p>
+  			<p class="zag1">Sta Maria Willeamstad, Curacao, AN5999, Netherlands</p>
+  			<p class="zag2">Practical Self-Servise Bi with PowerPivot for Exel SQL Server MVP and Bussines Intelligense Architect Bill Pearson leads this full-day, hands-on introduction to using PowerPiot for...</p>
+  		</div>
+  		<div>
+  		  <div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">55%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">45%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	</div>
+  	<div id="shadow5" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event5.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Training EN - OpenERP 7.0 Functional Trianing</h3>
+  			<p class="zag">Boulevard Barcelona</p>
+  			<p class="zag1">La Rambla 27, Barcelona, 08002, Spain</p>
+  			<p class="zag2">THE BOILER ROOM is coming to BCN The Boiler Room, un nuevo concepto de fiesta que aterriza en Barcelona, una noche fresca y muy energetica con una programacion de Dj`s de...</p>
+  		</div>
+  		<div>
+  		  <div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">31%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">69%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	</div>
+  	<div id="shadow6" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event6.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Band Workshop with artists in Residence Super Tenants</h3>
+  			<p class="zag">Culture Club Revelin</p>
+  			<p class="zag1">Sv. Dominica 3, Dubrovnic, 20000, Croatia</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  		  <div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">57%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">43%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  </div>
+  </div>
+  <div class="tab-pane col-md-12 row" id="profile">
+  	<div id="shadow7" class="col-md-4 col-sm-6 col-xs-12">
+  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event6.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Band Workshop with artists in Residence Super Tenants</h3>
+  			<p class="zag">Culture Club Revelin</p>
+  			<p class="zag1">Sv. Dominica 3, Dubrovnic, 20000, Croatia</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  			<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">57%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">43%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	<div id="shadow8" class="col-md-4 col-sm-6 col-xs-12">
+  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event5.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Training EN - OpenERP 7.0 Functional Trianing</h3>
+  			<p class="zag">Boulevard Barcelona</p>
+  			<p class="zag1">La Rambla 27, Barcelona, 08002, Spain</p>
+  			<p class="zag2">THE BOILER ROOM is coming to BCN The Boiler Room, un nuevo concepto de fiesta que aterriza en Barcelona, una noche fresca y muy energetica con una programacion de Dj`s de...</p>
+  		</div>
+  		<div>
+  			<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">31%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">69%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	<div id="shadow9" class="col-md-4 col-sm-6 col-xs-12">
+  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event4.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Faringdon Community Sports College - Summer - Week 2</h3>
+  			<p class="zag">University of Netherlands Antilles</p>
+  			<p class="zag1">Sta Maria Willeamstad, Curacao, AN5999, Netherlands</p>
+  			<p class="zag2">Practical Self-Servise Bi with PowerPivot for Exel SQL Server MVP and Bussines Intelligense Architect Bill Pearson leads this full-day, hands-on introduction to using PowerPiot for...</p>
+  		</div>
+  		<div>
+  		<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">55%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">45%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  		</div>
+  	</div>
+  	</div>
+  	<div id="shadow10" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event3.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Bocca Footbar @ Vama Veche</h3>
+  			<p class="zag">Pattichion Municipal Amphitheater</p>
+  			<p class="zag1">Nicolaou G. Dimitriou Street, Larnaca, 6031, Cyprus</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  		<div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">62%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">38%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  		</div>
+  		</div>
+  	</div>
+  	</div>
+  	<div id="shadow11" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event2.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Summer Art Club - Week 1/3</h3>
+  			<p class="zag">Fun Factory Wildeshausen</p>
+  			<p class="zag1">Am Umspannwerk 7, Wildeshausen, 27793, Germany</p>
+  			<p class="zag2">Join us for creative holiday activities - this week with Ashley & Letty! Let your 8-13 year olds to join to help burn some of that pent-up creative energy on our fun artist led workshops. You can book all three days, or just one at a time...</p>
+  		</div>
+  		<div>
+  		    <div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">25%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">75%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  	<div id="shadow12" class="col-md-4 col-sm-6 col-xs-12">
+  	  	  	  	  	<div id="white" class="col-md-11 col-sm-11 row">
+  		<div id="imagebar" class="row"><img id="img1" src="image/event1.jpg">
+  			<div></div>
+  			<div class="hovermenu"><img id="face" src="image/face.png"><span id="texthover">Aug 17, 2013 02:00pm - 08:00pm IST</span><img id="heart" src="image/heart.png"></div>
+  		</div>
+  		<div class="row bg1">
+  			<h3>Act Big! Ultimate Music Festival</h3>
+  			<p class="zag">Pattichion Municipal Amphitheater</p>
+  			<p class="zag1">Nicolaou G. Dimitriou Street, Larnaca, 6031, Cyprus</p>
+  			<p class="zag2">An evening of bowling by geeks for geeks. Nothing more, nothint less (adorn bowling shirts - funny shoes provided) Follow @TeamLebowski or #GeekBowling on Twitter for up to the minute news...</p>
+  		</div>
+  		<div>
+  		    <div id="malebg" class="col-xs-12 row">
+  			<div id="male" class="col-xs-6">
+  				<p class="persent">13%</p>
+  				<p class="m">MALE</p>
+  			</div>
+  			<div id="female" class="col-xs-6">
+  				<p class="persent">86%</p>
+  				<p class="m">FEMALE</p>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+  		<div id="butmore" class="col-md-12">
+  			<div id="loadmore" class="btn">Load More</div>
+  		</div>
+</div>
+		</div>
+	</div>
+							<!-- Конец таб меню -->
+							<!-- Футменю -->
+		<div id="footcontainer" class="container-fluid">
+			<div id="footer" class="container">
+				<div class="col-xs-12">
+					<ul class="footmenu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About eco</a></li>
+						<li><a href="#">How it works</a></li>
+						<li><a href="#">Industries</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Faq`s</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Terms of service</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+						<!-- Конец футменю -->
+
+		<div class="container-fluid">
+			<div id="backmenu" class="container">
+				<ul id="spritemenu" class="spritemenu pull-right">
+					<li><a class="f" href="#"></a></li>
+					<li><a class="t" href="#"></a></li>
+					<li><a class="i" href="#"></a></li>
+					<li><a class="p" href="#"></a></li>
+					<li><a class="c" href="#"></a></li>
+					<li><a class="w" href="#"></a></li>
+				</ul>
+				<p>©2013 steam. All Rights Reserved. Design by woof.</p>
+			</div>
+		</div>
+</body>
+</html>
