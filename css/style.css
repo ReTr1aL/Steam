@@ -1,7 +1,3 @@
-div {
-/*	padding: 15px;*/
-}
-
 div.container-fluid {
 	background: #333333;
 }
@@ -76,11 +72,6 @@ span.fontweith {
 #maps {
 	padding-bottom: 5px;
 }
-
-/*div[draggable="false"][controlwidth="28"] {
-	left: 130px;
-	top: 20px;
-}*/
 
 div.gm-style-mtc {
 	display: none;
